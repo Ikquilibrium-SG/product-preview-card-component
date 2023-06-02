@@ -1,0 +1,165 @@
+
+:root {
+    /* primary colors */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* neutral colors */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background: var(--cream);
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: var(--dark-grayish-blue);
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* for the image and the text to appear on one column we use grid */
+.main-container {
+    width: 550px;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    order: 0;
+}
+
+
+.text-container {
+    padding: 8% 9%;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: var(--dark-cyan);
+    color: var(--cream);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.cart-logo {
+    width: 15px;
+    height: 15px;
+    padding-right: 10px;
+}
+
+button:hover {
+    /* background: hsl(156, 33%, 16%); */
+    background: var(--very-dark-blue);
+}
+
+/* Typography */
+.title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Fraunces', serif;
+    color: var(--very-dark-blue);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+}
+
+span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: var(--dark-grayish-blue);
+    margin-left: 20px;
+    text-decoration: line-through;
+}
+
+
+/* Footer */
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    color: var(--very-dark-blue);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+    color: var(--very-dark-blue);
+}
+
+
+
+/* media query */
+@media (max-width: 475px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .main-container {
+        width: 90%;
+        height:680px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-container img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-container {
+        height: 43%;
+    }
+
+    .text-container {
+        padding: 4% 7%;
+    }
+
+}
+
+
+@media (max-width: 395px) {
+
+    .main-container {
+        height: 720px;
+    } 
+
+}
